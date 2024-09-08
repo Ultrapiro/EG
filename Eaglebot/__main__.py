@@ -42,7 +42,7 @@ async def startup_process():
     LOGS.info(
         f"||   Congratulation, now type {cmdhr}alive to see message if eagle is live"
     )
-    LOGS.info("||   If you need assistance, head to https://t.me/catuserbot_support")
+    LOGS.info("||   If you need assistance, head to https://t.me/PBX_CHAT")
     LOGS.info(
         "============================================================================"
     )
