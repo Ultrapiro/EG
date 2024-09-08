@@ -1,7 +1,6 @@
 try:
     from . import BASE, SESSION
 except ImportError as e:
-    raise AttributeError from e
 from sqlalchemy import Column, String, UnicodeText
 
 
