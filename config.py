@@ -26,3 +26,4 @@ class Development(Config):
     VCMODE = False
     # Your City's TimeZone
     TZ = "Asia/Kolkata"
+    RANDOM_STUFF_API_KEY = "20240908-1401-4740-801f-0d56de118901"
