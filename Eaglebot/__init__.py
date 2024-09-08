@@ -15,8 +15,8 @@ __license__ = "GNU Affero General Public License v3.0"
 __author__ = "EagleBot <https://github.com/Badhacker98/EAGLEBOT>"
 __copyright__ = f"EagleBot Copyright (C) 2020 - 2021  { __author__}"
 
-Eagle.version = __version__
-Eagle.tgbot.version = __version__
+eagle.version = __version__
+eagle.tgbot.version = __version__
 LOGS = logging.getLogger("EagleUserBot")
 bot = Eagle
 
