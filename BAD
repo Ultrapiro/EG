@@ -52,7 +52,7 @@ _start_bot () {
     _run_eaglepackgit
     cd $EAGLEPATH
     _run_eaglegit
-    python3 ../setup/updater.py ../requirements.txt requirements.txt
+    python3 ./setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
     echo "    ♡_🫧𝆺꯭𝅥˶‌‌֟፝★Ｅ𝓪𝘨ļ૯⁂★🍷┼❤️༆    "
     python3 -m Eaglebot
