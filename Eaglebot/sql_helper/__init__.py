@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 # the secret configuration specific things
-from ..Config import config
+from ..Config import Config
 from ..core.logger import logging
 from Eaglebot.core import session
 
@@ -14,9 +14,9 @@ LOGS = logging.getLogger(__name__)
 
 def start() -> scoped_session:
     database_url = (
-        config.DB_URI.replace("postgres:", "postgresql:")
-        if "postgres://" in config.DB_URI
-        else config.DB_URI
+        Config.DB_URI.replace("postgres:", "postgresql:")
+        if "postgres://" in Config.DB_URI
+        else Config.DB_URI
     )
     engine = create_engine(database_url)
     BASE.metadata.bind = engine
