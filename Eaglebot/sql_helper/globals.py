@@ -1,8 +1,8 @@
 try:
     from . import BASE, SESSION
 except ImportError as e:
+    raise AttributeError from e
     from sqlalchemy import Column, String, UnicodeText
-
 
 class Globals(BASE):
     __tablename__ = "globals"
