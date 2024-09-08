@@ -6,7 +6,7 @@ import heroku3
 
 from .Config import config
 from .core.logger import logging
-from .core.session import Eagle
+from .core.session import eagle
 from .helpers.utils.utils import runasync
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
