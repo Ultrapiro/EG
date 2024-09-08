@@ -32,20 +32,18 @@ try:
 except Exception as e:
     LOGS.error(f"{e}")
     sys.exit()
-
-
 async def startup_process():
     try:
         await verifyLoggerGroup()
-        await load_plugins("𝑃𝑙𝑢𝑔𝑖𝑛𝑠")
-        await load_plugins("𝐴𝑠𝑠𝑖𝑠𝑡𝑎𝑛𝑔")
+        await load_plugins("plugins")
+        await load_plugins("assistant")
         await externalrepo()
         await killer()
         print("----------------")
-        print("𝑆𝑡𝑎𝑟𝑡𝑖𝑛𝑔 𝐵𝑜𝑡 𝑀𝑜𝑑𝑒 ")
-        print("♡_🫧𝆺꯭𝅥˶‌‌֟፝★Ｅ𝓪𝘨ļ૯⁂★🍷┼❤️༆ ℎ𝑎𝑠 𝐵𝑒𝑒𝑛 𝐷𝑒𝑝𝑙𝑜𝑦𝑒𝑑 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦⚜")
-        print("𝑂𝑤𝑛𝑒𝑟 - @ll_BAD_MUNDA_ll")
-        print("𝐺𝑟𝑜𝑢𝑝 - @PBX_CHAT")
+        print("Starting Bot Mode!")
+        print("⚜ LegendBot Has Been Deployed Successfully ⚜")
+        print("OWNER - @LegendBoy_XD")
+        print("Group - @LegendBot_XD")
         print("----------------")
         await verifyLoggerGroup()
         await add_bot_to_logger_group(BOTLOG_CHATID)
@@ -64,16 +62,16 @@ async def externalrepo():
             Config.EXTERNAL_REPO, Config.EXTERNAL_REPOBRANCH, "xtraplugins"
         )
     if Config.VCMODE:
-        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "Eaglevc")
+        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "legendvc")
 
 
-eagle.loop.run_until_complete(startup_process())
+legend.loop.run_until_complete(startup_process())
 
 if len(sys.argv) not in (1, 3, 4):
-    eagle.disconnect()
+    legend.disconnect()
 else:
     try:
-        eagle.run_until_disconnected()
+        legend.run_until_disconnected()
     except ConnectionError:
         pass
-
+        
