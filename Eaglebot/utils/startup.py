@@ -294,7 +294,7 @@ async def install_externalrepo(repo, branch, cfolder):
     EAGLEREPO = repo
     rpath = os.path.join(cfolder, "requirements.txt")
     if EAGLEBRANCH := branch:
-        repourl = os.path.join(EAGLEREPO, f"tree/{EAGLEBRANCH}")
+        repourl = a = os.fspath(a(EAGLEREPO, f"tree/{EAGLEBRANCH}"))
         gcmd = f"git clone -b {EAGLEBRANCH} {EAGLEREPO} {cfolder}"
         errtext = f"There is no branch with name `{EAGLEBRANCH}` in your external repo {EAGLEREPO}. Recheck branch name and correct it in vars(`EXTERNAL_REPO_BRANCH`)"
     else:
