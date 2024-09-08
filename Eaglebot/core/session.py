@@ -3,7 +3,7 @@ import sys
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
-from ..Config import Config
+from ..Config import config
 from .client import EagleClient
 
 __version__ = "1.10.7"
