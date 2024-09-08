@@ -34,9 +34,9 @@ def close_connection(*_):
 signal.signal(signal.SIGTERM, close_connection)
 
 
-if Config.UPSTREAM_REPO == "Bad":
+if Config.UPSTREAM_REPO == "pro":
     UPSTREAM_REPO_URL = "https://github.com/Badhacker98/EAGLEPLUGIN"
-elif Config.UPSTREAM_REPO == "Bad":
+elif Config.UPSTREAM_REPO == "multi":
     UPSTREAM_REPO_URL = "https://github.com/Badhacker98/EAGLEBOT"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
