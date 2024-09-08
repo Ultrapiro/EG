@@ -4,7 +4,7 @@ from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
 from ..Config import config
-from .client import EagleClient
+from .client import eagleClient
 
 __version__ = "1.10.7"
 
