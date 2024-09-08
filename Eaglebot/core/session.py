@@ -3,14 +3,14 @@ import sys
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
-from ..Config import config
-from .client import eagleClient
+from ..Config import Config
+from .client import EagleClient
 
-__version__ = "1.10.7"
+__version__ = "1.10.6"
 
 loop = None
 
-if config.EAGLE_STRING:
+if Config.EAGLE_STRING:
     session = StringSession(str(Config.EAGLE_STRING))
 else:
     session = "EagleUserBot"
@@ -30,7 +30,7 @@ except Exception as e:
     print(f"EAGLE_STRING - {e}")
     sys.exit()
 
-eagle.tgbot = tgbot = EagleClient(
+Eagle.tgbot = tgbot = EagleClient(
     session="EagleTgbot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
