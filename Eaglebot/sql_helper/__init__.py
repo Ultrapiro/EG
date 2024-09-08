@@ -7,6 +7,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 # the secret configuration specific things
 from ..Config import config
 from ..core.logger import logging
+from Eaglebot.core import session
 
 LOGS = logging.getLogger(__name__)
 
