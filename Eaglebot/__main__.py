@@ -18,9 +18,8 @@ from .utils import (
     
 LOGS = logging.getLogger("CatUserbot")
 
-LOGS.info(userbot.__copyright__)
-LOGS.info(f"Licensed under the terms of the {userbot.__license__}")
-
+print(Eaglebot.__copyright__)
+print("𝐿𝑖𝑐𝑒𝑛𝑠𝑒𝑑 𝑈𝑛𝑑𝑒𝑟 𝑇ℎ𝑒 𝑇𝑒𝑟𝑚𝑠 𝑂𝑓 𝑇ℎ𝑒 " + Eaglebot.__license__)
 cmdhr = Config.HANDLER
 
 try:
