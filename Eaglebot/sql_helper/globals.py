@@ -1,5 +1,5 @@
 try:
-    from . import BASE, EAGLE_STRING
+    from . import BASE, session
 except AttributeError as e:
     from sqlalchemy import Column, String, UnicodeText
 
