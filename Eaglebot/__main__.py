@@ -65,13 +65,13 @@ async def externalrepo():
         await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "legendvc")
 
 
-legend.loop.run_until_complete(startup_process())
+eagle.loop.run_until_complete(startup_process())
 
 if len(sys.argv) not in (1, 3, 4):
-    legend.disconnect()
+    eagle.disconnect()
 else:
     try:
-        legend.run_until_disconnected()
+        eagle.run_until_disconnected()
     except ConnectionError:
         pass
         
