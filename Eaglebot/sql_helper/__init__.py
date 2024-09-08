@@ -7,7 +7,7 @@ from telethon.sessions import StringSession
 
 # the secret configuration specific things
 from ..Config import Config
-from .core.session import eagle 
+from .core.session import eagle
 from ..core.logger import logging
 
 LOGS = logging.getLogger(__name__)
