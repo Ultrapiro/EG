@@ -6,8 +6,8 @@ except ImportError as e:
 
 class Globals(BASE):
     __tablename__ = "globals"
-    variable = (String, primary_key=True, nullable=False)
-    value = (UnicodeText, primary_key=True, nullable=False)
+    variable = Column(String, primary_key=True, nullable=False)
+    value = Column(UnicodeText, primary_key=True, nullable=False)
 
     def __init__(self, variable, value):
         self.variable = str(variable)
