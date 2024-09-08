@@ -1,1 +1,1 @@
-from Eaglebot.Config import Config
+from .config import Config
