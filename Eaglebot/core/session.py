@@ -10,7 +10,7 @@ __version__ = "1.10.7"
 
 loop = None
 
-if config.EAGLE_STRING:
+if Config.EAGLE_STRING:
     session = StringSession(str(Config.EAGLE_STRING))
 else:
     session = "EagleUserBot"
