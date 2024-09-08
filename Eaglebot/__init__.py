@@ -4,7 +4,7 @@ import time
 
 import heroku3
 
-from .Config import config
+from .Config import Config
 from .core.logger import logging
 from .core.session import eagle
 from .helpers.utils.utils import runasync
