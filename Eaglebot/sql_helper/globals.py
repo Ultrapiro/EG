@@ -5,7 +5,6 @@ except ImportError as e:
     from sqlalchemy import Column, String, UnicodeText
 
 class Globals(BASE):
-class Globals(BASE):
     __tablename__ = "globals"
     variable = Column(String, primary_key=True, nullable=False)
     value = Column(UnicodeText, primary_key=True, nullable=False)
