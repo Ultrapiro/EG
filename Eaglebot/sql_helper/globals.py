@@ -1,7 +1,8 @@
 try:
-    from . import BASE, session
-except AttributeError as e:
-    from sqlalchemy import Column, String, UnicodeText
+    from . import BASE, SESSION
+except ImportError as e:
+    raise AttributeError from e
+from sqlalchemy import Column, String, UnicodeText
 
 
 class Globals(BASE):
