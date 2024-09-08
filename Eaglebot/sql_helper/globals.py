@@ -1,8 +1,7 @@
 try:
     from . import BASE, SESSION
 except ImportError as e:
-    
-from sqlalchemy import Column, String, UnicodeText
+    from sqlalchemy import Column, String, UnicodeText
 
 
 class Globals(BASE):
