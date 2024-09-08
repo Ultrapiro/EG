@@ -30,7 +30,7 @@ except Exception as e:
     print(f"EAGLE_STRING - {e}")
     sys.exit()
 
-eagle.tgbot = tgbot = eagleClient(
+eagle.tgbot = tgbot = EagleClient(
     session="EagleTgbot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
