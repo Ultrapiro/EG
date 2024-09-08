@@ -18,7 +18,7 @@ __copyright__ = f"EagleBot Copyright (C) 2020 - 2021  { __author__}"
 eagle.version = __version__
 eagle.tgbot.version = __version__
 LOGS = logging.getLogger("EagleUserBot")
-bot = Eagle
+bot = eagle
 
 
 StartTime = time.time()
