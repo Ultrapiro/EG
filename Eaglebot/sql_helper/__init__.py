@@ -7,6 +7,7 @@ from telethon.sessions import StringSession
 
 # the secret configuration specific things
 from ..Config import Config
+from .core.session import eagle 
 from ..core.logger import logging
 
 LOGS = logging.getLogger(__name__)
@@ -24,7 +25,7 @@ def start() -> scoped_session:
 
 try:
     BASE = declarative_base()
-    EAGLE_STRING = start()
+    session = start()
 except AttributeError as e:
     # this is a dirty way for the work-around required for #23
     LOGS.error(
