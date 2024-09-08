@@ -27,7 +27,7 @@ cmdhr = Config.HANDLER
 
 try:
     LOGS.info("𝑆𝑡𝑟𝑎𝑖𝑛𝑔 𝐸𝑎𝑔𝑙𝑒 𝑈𝑠𝑒𝑟𝑏𝑜𝑡")
-    Eagle.loop.run_until_complete(setup_bot())
+    eagle.loop.run_until_complete(setup_bot())
     LOGS.info("𝑇𝑔 𝐵𝑜𝑡 𝑆𝑒𝑡𝑢𝑝 𝐶𝑜𝑚𝑝𝑙𝑒𝑡𝑒𝑑")
 except Exception as e:
     LOGS.error(f"{e}")
