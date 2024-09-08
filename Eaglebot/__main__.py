@@ -14,7 +14,7 @@ from .utils import (
     load_plugins,
     setup_bot,
     startupmessage,
-    verifyLoggerGroup,
+    verifyLoggerGroup,)
     
 LOGS = logging.getLogger("CatUserbot")
 
