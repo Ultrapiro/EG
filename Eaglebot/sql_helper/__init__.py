@@ -5,16 +5,18 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 # the secret configuration specific things
-from ..Config import config
+from ..Config import Config
 from ..core.logger import logging
 
 LOGS = logging.getLogger(__name__)
 
 
 def start() -> scoped_session:
-    database_url = config.DB_URI
-    if "postgres://" in database_url:
-        database_url = database_url.replace("postgres:", "postgresql:")
+    database_url = (
+        Config.DB_URI.replace("postgres:", "postgresql:")
+        if "postgres://" in Config.DB_URI
+        else Config.DB_URI
+    )
     engine = create_engine(database_url)
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
