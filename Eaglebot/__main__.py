@@ -55,12 +55,12 @@ async def startup_process():
 
 
 
-Eagle.loop.run_until_complete(startup_process())
+eagle.loop.run_until_complete(startup_process())
 
 if len(sys.argv) not in (1, 3, 4):
-    Eagle.disconnect()
+    eagle.disconnect()
 else:
     try:
-        Eagle.run_until_disconnected()
+        eagle.run_until_disconnected()
     except ConnectionError:
         pass
