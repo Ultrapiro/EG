@@ -42,12 +42,11 @@ async def startup_process():
         LOGS.info(
         "============================================================================"
     )
-    LOGS.info("||               ʏᴀʏ ʏᴏᴜʀ ᴜꜱᴇʀʙᴏᴛ ɪꜱ ᴏꜰꜰɪᴄɪᴀʟʟʏ ᴡᴏʀᴋɪɴɢ.
-    !!!")
+    LOGS.info("||               Yay your userbot is officially working.!!!")
     LOGS.info(
-        f"||   ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴ, ɴᴏᴡ ᴛʏᴘᴇ{cmdhr}ᴀʟɪᴠᴇ ᴛᴏ ꜱᴇᴇ ᴍᴇꜱꜱᴀɢᴇ ɪꜰ ᴇᴀɢʟᴇ ɪꜱ ʟɪᴠᴇ"
+        f"||   Congratulation, now type {cmdhr}alive to see message if eagle is live"
     )
-    LOGS.info("||   ɪꜰ ʏᴏᴜ ɴᴇᴇᴅ ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ ʜᴇᴀᴅ ᴛᴏ https://t.me/PBX_CHAT")
+    LOGS.info("||   If you need assistance, head to https://t.me/PBX_CHAT")
     LOGS.info(
         "============================================================================"
     )
