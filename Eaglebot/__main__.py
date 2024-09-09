@@ -39,12 +39,17 @@ async def startup_process():
         await load_plugins("assistant")
         await externalrepo()
         await killer()
-        print("----------------")
-        print("Starting Bot Mode!")
-        print("⚜ LegendBot Has Been Deployed Successfully ⚜")
-        print("OWNER - @LegendBoy_XD")
-        print("Group - @LegendBot_XD")
-        print("----------------")
+        LOGS.info(
+        "============================================================================"
+    )
+    LOGS.info("||               ʏᴀʏ ʏᴏᴜʀ ᴜꜱᴇʀʙᴏᴛ ɪꜱ ᴏꜰꜰɪᴄɪᴀʟʟʏ ᴡᴏʀᴋɪɴɢ.!!!")
+    LOGS.info(
+        f"||   ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴ, ɴᴏᴡ ᴛʏᴘᴇ{cmdhr}ᴀʟɪᴠᴇ ᴛᴏ ꜱᴇᴇ ᴍᴇꜱꜱᴀɢᴇ ɪꜰ ᴇᴀɢʟᴇ ɪꜱ ʟɪᴠᴇ"
+    )
+    LOGS.info("||   ɪꜰ ʏᴏᴜ ɴᴇᴇᴅ ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ ʜᴇᴀᴅ ᴛᴏ https://t.me/PBX_CHAT")
+    LOGS.info(
+        "============================================================================"
+    )
         await verifyLoggerGroup()
         await add_bot_to_logger_group(BOTLOG_CHATID)
         if PM_LOGGER_GROUP_ID != -100:
