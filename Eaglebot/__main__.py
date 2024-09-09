@@ -35,6 +35,8 @@ async def startup_process():
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
+    await externalrepo()
+    await killer()
     LOGS.info(
         "============================================================================"
     )
@@ -47,11 +49,14 @@ async def startup_process():
         "============================================================================"
     )
     await verifyLoggerGroup()
-    await add_bot_to_logger_group(BOTLOG_CHATID)
-    if PM_LOGGER_GROUP_ID != -100:
-        await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
-    await startupmessage()
-    return
+        await add_bot_to_logger_group(BOTLOG_CHATID)
+        if PM_LOGGER_GROUP_ID != -100:
+            await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
+        await startupmessage()
+        await hekp()
+    except Exception as e:
+        LOGS.error(f"{str(e)}")
+        sys.exit()
 
 
 async def externalrepo():
@@ -72,4 +77,3 @@ else:
         eagle.run_until_disconnected()
     except ConnectionError:
         pass
-        
