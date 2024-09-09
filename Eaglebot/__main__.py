@@ -42,7 +42,8 @@ async def startup_process():
         LOGS.info(
         "============================================================================"
     )
-    LOGS.info("||               Yay your userbot is officially working.!!!")
+    LOGS.info("||               Yay your userbot is officially working.!!!"
+    )
     LOGS.info(
         f"||   Congratulation, now type {cmdhr}alive to see message if eagle is live"
     )
