@@ -28,3 +28,5 @@ class Development(Config):
     TZ = "Asia/Kolkata"
     RANDOM_STUFF_API_KEY = "20240908-1401-4740-801f-0d56de118901"
     LOGGER_ID = -1002355928218
+     EXTERNAL_REPO = "https://github.com/badmunda98/EaglePlugins"
+    # if you need badcat plugins set "True"
