@@ -60,14 +60,16 @@ async def externalrepo():
             Config.EXTERNAL_REPO, Config.EXTERNAL_REPOBRANCH, "xtraplugins"
         )
     if Config.VCMODE:
-        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "Eaglevc")
+        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "legendvc")
+
 
 eagle.loop.run_until_complete(startup_process())
 
-eagle.loop.run_until_complete(externalrepo())
-
-if len(sys.argv) in {1, 3, 4}:
-    with contextlib.suppress(ConnectionError):
-        eagle.run_until_disconnected()
-else:
+if len(sys.argv) not in (1, 3, 4):
     eagle.disconnect()
+else:
+    try:
+        eagle.run_until_disconnected()
+    except ConnectionError:
+        pass
+        
