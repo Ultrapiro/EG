@@ -32,24 +32,24 @@ except Exception as e:
     
 async def startup_process():
     try:
-    await verifyLoggerGroup()
-    await load_plugins("plugins")
-    await load_plugins("assistant")
-    await externalrepo()
-    await killer()
-    LOGS.info(
+        await verifyLoggerGroup()
+        await load_plugins("plugins")
+        await load_plugins("assistant")
+        await externalrepo()
+        await killer()
+        LOGS.info(
         "============================================================================"
     )
-    LOGS.info("||               Yay your userbot is officially working.!!!")
-    LOGS.info(
+        LOGS.info("||               Yay your userbot is officially working.!!!")
+        LOGS.info(
         f"||   Congratulation, now type {cmdhr}alive to see message if eagle is live"
     )
-    LOGS.info("||   If you need assistance, head to https://t.me/catuserbot_support")
-    LOGS.info(
+        LOGS.info("||   If you need assistance, head to https://t.me/catuserbot_support")
+        LOGS.info(
         "============================================================================"
     )
-    await verifyLoggerGroup()
-    await add_bot_to_logger_group(BOTLOG_CHATID)
+        await verifyLoggerGroup()
+        await add_bot_to_logger_group(BOTLOG_CHATID)
     if PM_LOGGER_GROUP_ID != -100:
         await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
     await startupmessage()
