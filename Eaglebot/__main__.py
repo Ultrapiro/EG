@@ -56,24 +56,22 @@ async def startup_process():
             return
             
             async def externalrepo():
-    string = "<b>Your external repo plugins have imported.<b>\n\n"
-    if Config.EXTERNAL_REPO:
-        data = await install_externalrepo(
-            Config.EXTERNAL_REPO, Config.EXTERNAL_REPOBRANCH, "xtraplugins"
+                string = "<b>Your external repo plugins have imported.<b>\n\n"
+                if Config.EXTERNAL_REPO:
+                    data = await install_externalrepo(
+                        Config.EXTERNAL_REPO, Config.EXTERNAL_REPOBRANCH, "xtraplugins"
         )
-        string += f"<b>➜ Repo:  </b><a href='{data[0]}'><b>{data[1]}</b></a>\n<b>     • Imported Plugins:</b>  <code>{data[2]}</code>\n<b>     • Failed to Import:</b>  <code>{', '.join(data[3])}</code>\n\n"
-            if Config.VCMODE:
-        data = await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "catvc")
-        string += f"<b>➜ Repo:  </b><a href='{data[0]}'><b>{data[1]}</b></a>\n<b>     • Imported Plugins:</b>  <code>{data[2]}</code>\n<b>     • Failed to Import:</b>  <code>{', '.join(data[3])}</code>\n\n"
-    if "Imported Plugins" in string:
-        await eagle.tgbot.send_message(BOTLOG_CHATID, string, parse_mode="html")
-        
-       eagle.loop.run_until_complete(startup_process())
-
-if len(sys.argv) not in (1, 3, 4):
-    eagle.disconnect()
-else:
-    try:
-        eagle.run_until_disconnected()
-    except ConnectionError:
-        pass
+                    string += f"<b>➜ Repo:  </b><a href='{data[0]}'><b>{data[1]}</b></a>\n<b>     • Imported Plugins:</b>  <code>{data[2]}</code>\n<b>     • Failed to Import:</b>  <code>{', '.join(data[3])}</code>\n\n"
+                    if Config.VCMODE:
+                        data = await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "catvc")
+                        string += f"<b>➜ Repo:  </b><a href='{data[0]}'><b>{data[1]}</b></a>\n<b>     • Imported Plugins:</b>  <code>{data[2]}</code>\n<b>     • Failed to Import:</b>  <code>{', '.join(data[3])}</code>\n\n"
+                        if "Imported Plugins" in string:
+                            await eagle.tgbot.send_message(BOTLOG_CHATID, string, parse_mode="html")
+                            eagle.loop.run_until_complete(startup_process())
+                            if len(sys.argv) not in (1, 3, 4):
+                                eagle.disconnect()
+                            else:
+                                try:
+                                    eagle.run_until_disconnected()
+                                except ConnectionError:
+                                    pass
