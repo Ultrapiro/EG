@@ -20,7 +20,6 @@ __version__ = "1.10.6"
 loop = None
 
 if Config.EAGLE_STRING:
-    session = 
     session = StringSession(str(Config.EAGLE_STRING))
 else:
     session = "EagleUserBot"
