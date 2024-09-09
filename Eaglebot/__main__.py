@@ -65,7 +65,7 @@ async def externalrepo():
             Config.EXTERNAL_REPO, Config.EXTERNAL_REPOBRANCH, "xtraplugins"
         )
     if Config.VCMODE:
-        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "legendvc")
+        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "eaglevc")
 
 
 eagle.loop.run_until_complete(startup_process())
