@@ -166,7 +166,7 @@ class Config(object):
     BOTLOG = False
     BOTLOG_CHATID = 0
     # External plugins repo
-    EXTERNAL_REPOBRANCH = os.environ.get("EXTERNAL_REPOBRANCH", "Bad")
+    EXTERNAL_REPO = os.environ.get("EXTERNAL_REPO", "Bad")
     if bool(EXTERNAL_REPO and (EXTERNAL_REPO.lower() != "False")):
         if not url(EXTERNAL_REPO):
             EXTERNAL_REPO = "https://github.com/badmunda98/EaglePlugins"
