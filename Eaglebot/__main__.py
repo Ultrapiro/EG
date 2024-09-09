@@ -54,8 +54,8 @@ async def startup_process():
             await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
             await startupmessage()
             return
-    
-    async def externalrepo():
+            
+            async def externalrepo():
     string = "<b>Your external repo plugins have imported.<b>\n\n"
     if Config.EXTERNAL_REPO:
         data = await install_externalrepo(
