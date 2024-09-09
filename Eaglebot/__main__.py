@@ -40,11 +40,7 @@ async def startup_process():
     LOGS.info(
         "============================================================================"
     )
-    LOGS.info("||               Yay your userbot is officially working.!!!")
-    LOGS.info(
-        f"||   Congratulation, now type {cmdhr}alive to see message if eagle is live"
-    )
-    LOGS.info("||   If you need assistance, head to https://t.me/catuserbot_support")
+    print("Starting Bot Mode!")
     LOGS.info(
         "============================================================================"
     )
