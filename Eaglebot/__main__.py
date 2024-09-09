@@ -30,9 +30,8 @@ except Exception as e:
     LOGS.error(f"{e}")
     sys.exit()
     
-    
-    
-    async def startup_process():
+async def startup_process():
+    try:
     await verifyLoggerGroup()
     await load_plugins("plugins")
     await load_plugins("assistant")
