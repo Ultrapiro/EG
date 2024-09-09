@@ -37,13 +37,8 @@ async def startup_process():
     await load_plugins("assistant")
     await externalrepo()
     await killer()
-    LOGS.info(
-        "============================================================================"
-    )
     print("Starting Bot Mode!")
-    LOGS.info(
-        "============================================================================"
-    )
+    
     await verifyLoggerGroup()
         await add_bot_to_logger_group(BOTLOG_CHATID)
         if PM_LOGGER_GROUP_ID != -100:
