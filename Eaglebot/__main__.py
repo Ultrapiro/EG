@@ -42,13 +42,13 @@ async def startup_process():
         LOGS.info(
         "============================================================================"
     )
-    LOGS.info("||               Yay your userbot is officially working.!!!"
+        LOGS.info("||               Yay your userbot is officially working.!!!"
     )
-    LOGS.info(
+        LOGS.info(
         f"||   Congratulation, now type {cmdhr}alive to see message if eagle is live"
     )
-    LOGS.info("||   If you need assistance, head to https://t.me/PBX_CHAT")
-    LOGS.info(
+        LOGS.info("||   If you need assistance, head to https://t.me/PBX_CHAT")
+        LOGS.info(
         "============================================================================"
     )
         await verifyLoggerGroup()
