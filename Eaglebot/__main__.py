@@ -14,46 +14,44 @@ from .utils import (
     load_plugins,
     setup_bot,
     startupmessage,
-    verifyLoggerGroup,
-)
-
-LOGS = logging.getLogger("𝐸𝑎𝑔𝑙𝑒 𝑈𝑠𝑒𝑟𝑏𝑜𝑡")
+    verifyLoggerGroup,)
+    
+LOGS = logging.getLogger("CatUserbot")
 
 print(Eaglebot.__copyright__)
 print("𝐿𝑖𝑐𝑒𝑛𝑠𝑒𝑑 𝑈𝑛𝑑𝑒𝑟 𝑇ℎ𝑒 𝑇𝑒𝑟𝑚𝑠 𝑂𝑓 𝑇ℎ𝑒 " + Eaglebot.__license__)
-
 cmdhr = Config.HANDLER
 
-
 try:
-    LOGS.info("𝑆𝑡𝑟𝑎𝑖𝑛𝑔 𝐸𝑎𝑔𝑙𝑒 𝑈𝑠𝑒𝑟𝑏𝑜𝑡")
+    LOGS.info("Starting Userbot")
     eagle.loop.run_until_complete(setup_bot())
-    LOGS.info("𝑇𝑔 𝐵𝑜𝑡 𝑆𝑒𝑡𝑢𝑝 𝐶𝑜𝑚𝑝𝑙𝑒𝑡𝑒𝑑")
+    LOGS.info("TG Bot Startup Completed")
 except Exception as e:
     LOGS.error(f"{e}")
     sys.exit()
+
+
 async def startup_process():
-    try:
-        await verifyLoggerGroup()
-        await load_plugins("plugins")
-        await load_plugins("assistant")
-        await externalrepo()
-        await killer()
-        print("----------------")
-        print("Starting Bot Mode!")
-        print("⚜ LegendBot Has Been Deployed Successfully ⚜")
-        print("OWNER - @LegendBoy_XD")
-        print("Group - @LegendBot_XD")
-        print("----------------")
-        await verifyLoggerGroup()
-        await add_bot_to_logger_group(BOTLOG_CHATID)
-        if PM_LOGGER_GROUP_ID != -100:
-            await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
-        await startupmessage()
-        await hekp()
-    except Exception as e:
-        LOGS.error(f"{str(e)}")
-        sys.exit()
+    await verifyLoggerGroup()
+    await load_plugins("plugins")
+    await load_plugins("assistant")
+    LOGS.info(
+        "============================================================================"
+    )
+    LOGS.info("||               Yay your userbot is officially working.!!!")
+    LOGS.info(
+        f"||   Congratulation, now type {cmdhr}alive to see message if eagle is live"
+    )
+    LOGS.info("||   If you need assistance, head to https://t.me/catuserbot_support")
+    LOGS.info(
+        "============================================================================"
+    )
+    await verifyLoggerGroup()
+    await add_bot_to_logger_group(BOTLOG_CHATID)
+    if PM_LOGGER_GROUP_ID != -100:
+        await add_bot_to_logger_group(PM_LOGGER_GROUP_ID)
+    await startupmessage()
+    return
 
 
 async def externalrepo():
@@ -62,16 +60,14 @@ async def externalrepo():
             Config.EXTERNAL_REPO, Config.EXTERNAL_REPOBRANCH, "xtraplugins"
         )
     if Config.VCMODE:
-        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "legendvc")
-
+        await install_externalrepo(Config.VC_REPO, Config.VC_REPOBRANCH, "Eaglevc")
 
 eagle.loop.run_until_complete(startup_process())
 
-if len(sys.argv) not in (1, 3, 4):
-    eagle.disconnect()
-else:
-    try:
+eagle.loop.run_until_complete(externalrepo())
+
+if len(sys.argv) in {1, 3, 4}:
+    with contextlib.suppress(ConnectionError):
         eagle.run_until_disconnected()
-    except ConnectionError:
-        pass
-        
+else:
+    eagle.disconnect()
