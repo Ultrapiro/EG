@@ -16,7 +16,7 @@ from .utils import (
     startupmessage,
     verifyLoggerGroup,)
     
-LOGS = logging.getLogger("CatUserbot")
+LOGS = logging.getLogger("EAGLEUSERBOT")
 
 print(Eaglebot.__copyright__)
 print("𝐿𝑖𝑐𝑒𝑛𝑠𝑒𝑑 𝑈𝑛𝑑𝑒𝑟 𝑇ℎ𝑒 𝑇𝑒𝑟𝑚𝑠 𝑂𝑓 𝑇ℎ𝑒 " + Eaglebot.__license__)
