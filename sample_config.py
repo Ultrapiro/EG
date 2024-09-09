@@ -175,7 +175,7 @@ class Config(object):
     EXTERNAL_REPOBRANCH = os.environ.get("EXTERNAL_REPOBRANCH", "Bad")
     # for vc plugins
     VCMODE = os.environ.get("VCMODE", True)
-    VCMODE = bool(VCMODE and (VCMODE.lower() != "false"))
+    VCMODE = bool(VCMODE and (VCMODE.lower() != "True"))
     VC_SESSION = os.environ.get("VC_SESSION", None)
     VC_REPO = os.environ.get("VC_REPO", "https://github.com/badmunda98/EagleVc")
     VC_REPOBRANCH = os.environ.get("VC_REPOBRANCH", "Bad")
