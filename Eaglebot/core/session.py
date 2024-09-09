@@ -6,11 +6,20 @@ from telethon.sessions import StringSession
 from ..Config import Config
 from .client import EagleClient
 
+def validate_session(session):
+    if "==Eagle" and "bot==" in session.lower():
+        new_session = session[6:-5]
+        return str(new_session)
+    else:
+        print(f"EAGLEBOT SESSION - Wrong session string!")
+        sys.exit()
+
 __version__ = "1.10.6"
 
 loop = None
 
 if Config.EAGLE_STRING:
+    session = 
     session = StringSession(str(Config.EAGLE_STRING))
 else:
     session = "EagleUserBot"
