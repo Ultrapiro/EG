@@ -67,11 +67,15 @@ async def startup_process():
                         string += f"<b>➜ Repo:  </b><a href='{data[0]}'><b>{data[1]}</b></a>\n<b>     • Imported Plugins:</b>  <code>{data[2]}</code>\n<b>     • Failed to Import:</b>  <code>{', '.join(data[3])}</code>\n\n"
                         if "Imported Plugins" in string:
                             await eagle.tgbot.send_message(BOTLOG_CHATID, string, parse_mode="html")
-                            eagle.loop.run_until_complete(startup_process())
-                            if len(sys.argv) not in (1, 3, 4):
-                                eagle.disconnect()
-                            else:
-                                try:
-                                    eagle.run_until_disconnected()
-                                except ConnectionError:
-                                    pass
+
+
+eagle.loop.run_until_complete(startup_process())
+
+if len(sys.argv) not in (1, 3, 4):
+    eagle.disconnect()
+else:
+    try:
+        eagle.run_until_disconnected()
+    except ConnectionError:
+        pass
+        
