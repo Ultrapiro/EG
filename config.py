@@ -14,7 +14,7 @@ class Development(Config):
     # After cloning the repo and installing requirements do python3 telesetup.py an fill th this
     EAGLE_STRING = "1BVtsOKYBuyhduVwkleW2OHA7wH9R-VxlKJiIp8_f7PLWvv_j5FhaBbvcmOXcAljuK5E2IC7Q7tsex29DpLEY11E3gNSnUiKsGintKNlvQbqFjEvh4eq_ob6YQq23SLsMGpkT8M6lcmsBCQ4jh1C_V-BqItIOHmCBGodOqx0DFO8HVQms-4t4_D_YcXaHwPFFQjYNZHV0uEaJypCDsCuAwuHgFR30knXzn731wnVJkQTvRR0Be5M3PGxcF4OinxnM_gOHIjzVd0e3k1QGktLJ6fpGLipB9B3UFnC0kiCcmopB7cC7Y9cIiNQwArGUxu3Msth2a6V0rnNe6F5Vu07bavtP2wMtan0="
     # create a new bot in @botfather and fill the following vales with bottoken
-    BOT_TOKEN = "7451378287:AAHmSqw8cIDKo4UmImAK2opVQkZIm4ArXjg"
+    BOT_TOKEN = "7217412726:AAEsahhAS5Li1w1DIVccJAVeqo69jANZMoM"
     # command handler
     HANDLER = "."
     # command hanler for sudo
