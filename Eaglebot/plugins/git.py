@@ -15,6 +15,7 @@ from ..core.logger import logging
 from ..core.managers import eod, eor
 from ..helpers.utils import reply_id
 from . import reply_id
+from . import eagle_channel
 
 LOGS = logging.getLogger(os.path.basename(__name__))
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
@@ -26,7 +27,7 @@ msg = f"""
 **⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 ♡_🫧𝆺꯭𝅥˶‌‌֟፝★Ｅ𝓪𝘨ļ૯⁂★🍷┼❤️༆ ⚜**
   •        [📌 ʀᴇᴘᴏ 📌](https://github.com/Badhacker98/EAGLEBOT)
   •        [💢 ᴅᴇᴘʟᴏʏ 💢](https://dashboard.heroku.com/new?org=arona&template=https%3A%2F%2Fgithub.com%2FBadhacker98%2FEAGLEBOT)
-  •  ©️ { @PBX_CHAT } ™
+  •  ©️ {eagle_channel} ™
 """
 
 
