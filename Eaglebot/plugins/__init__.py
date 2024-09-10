@@ -69,7 +69,7 @@ if "@" in my_group:
 
 # My Channel
 chnl_link = "https://t.me/HEROKUBIN_01"
-Eagle_channel = f"[♡_🫧𝆺꯭𝅥˶‌‌֟፝★Ｅ𝓪𝘨ļ૯⁂★🍷┼❤️༆ ]({chnl_link})"
+eagle_channel = f"[♡_🫧𝆺꯭𝅥˶‌‌֟፝★Ｅ𝓪𝘨ļ૯⁂★🍷┼❤️༆ ]({chnl_link})"
 grp_link = "https://t.me/PBX_CHAT"
 eagle_grp = f"[♡_🫧𝆺꯭𝅥˶‌‌֟፝★Ｅ𝓪𝘨ļ૯⁂★🍷┼❤️༆ ]({grp_link})"
 
