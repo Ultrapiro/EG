@@ -269,7 +269,7 @@ async def tiny_pic_spam(e):
         "header": "Spam the text letter by letter",
         "description": "Spam the chat with every letter in given text as new message.",
         "usage": "{tr}cspam <text>",
-        "examples": "{tr}cspam eagleuserbot",
+        "examples": "{tr}cspam Eagleuserbot",
     },
 )
 async def tmeme(event):
@@ -307,7 +307,7 @@ async def tmeme(event):
         "header": "Spam the text word by word.",
         "description": "Spams the chat with every word in given text as new message.",
         "usage": "{tr}wspam <text>",
-        "examples": "{tr}wspam I am using eagleUserBot",
+        "examples": "{tr}wspam I am using Eagleuserbot",
     },
 )
 async def tmeme(event):
@@ -374,3 +374,4 @@ async def spammer(event):
     await event.delete()
     addgvar("spamwork", True)
     await spam_function(event, reply, lol, sleeptimem, sleeptimet, DelaySpam=True)
+    
