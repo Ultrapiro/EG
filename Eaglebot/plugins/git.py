@@ -19,7 +19,6 @@ from . import reply_id
 LOGS = logging.getLogger(os.path.basename(__name__))
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
 menu_category = "misc"
-from . import eagle_channel
 
 GIT_TEMP_DIR = "./temp/"
 
@@ -27,7 +26,7 @@ msg = f"""
 **⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 ♡_🫧𝆺꯭𝅥˶‌‌֟፝★Ｅ𝓪𝘨ļ૯⁂★🍷┼❤️༆ ⚜**
   •        [📌 ʀᴇᴘᴏ 📌](https://github.com/Badhacker98/EAGLEBOT)
   •        [💢 ᴅᴇᴘʟᴏʏ 💢](https://dashboard.heroku.com/new?org=arona&template=https%3A%2F%2Fgithub.com%2FBadhacker98%2FEAGLEBOT)
-  •  ©️ {eagle_channel} ™
+  •  ©️ { @PBX_CHAT } ™
 """
 
 
