@@ -10,8 +10,8 @@ from ..sql_helper.globals import gvarstatus
 def check_owner(func):
     async def wrapper(c_q: CallbackQuery):
         if c_q.query.user_id and (
-            c_q.query.user_id == Config.OWNER_ID
-            or c_q.query.user_id in Config.SUDO_USERS
+            c_q.query.user_id == config.OWNER_ID
+            or c_q.query.user_id in config.SUDO_USERS
         ):
             try:
                 await func(c_q)
