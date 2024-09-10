@@ -74,7 +74,7 @@ async def killer():
             await bot.send_message("@BotFather", "/setuserpic")
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
-            await asyncio.sleep(1)
+            await asyncio.sleep(2)
             await bot.send_file(
                 "@BotFather", "Eaglebot/sukh/main.jpg"
             )
