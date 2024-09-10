@@ -27,8 +27,6 @@ class Development(Config):
     # Your City's TimeZone
     TZ = "Asia/Kolkata"
     RANDOM_STUFF_API_KEY = "20240908-1401-4740-801f-0d56de118901"
-    LOGGER_ID = -1002381417478
-    BOTLOG_CHATID = -1002381417478
-    PRIVATE_GROUP_BOT_API_ID = -1002381417478
+    PRIVATE_GROUP_BOT_API_ID = -100
     EXTERNAL_REPO = "https://github.com/badmunda98/EaglePlugins"
     # if you need badcat plugins set "True"
