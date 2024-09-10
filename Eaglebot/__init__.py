@@ -22,7 +22,7 @@ bot = eagle
 
 
 StartTime = time.time()
-Eagleversion = "α • 3.0"
+eagleversion = "α • 3.0"
 
 
 def close_connection(*_):
