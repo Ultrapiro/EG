@@ -40,3 +40,4 @@ async def spam(e):
                 await asyncio.sleep(0.1)
     else:
         await e.reply(usage, parse_mode=None, link_preview=None)
+        
