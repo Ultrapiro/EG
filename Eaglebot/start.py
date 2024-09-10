@@ -76,7 +76,7 @@ async def killer():
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
             await bot.send_file(
-                "@BotFather", "Eaglebot/helpers/resources/pics/main.jpg"
+                "@BotFather", "Eaglebot/sukh/main.jpg"
             )
             await asyncio.sleep(2)
         except Exception as e:
