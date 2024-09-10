@@ -14,7 +14,7 @@ class Development(Config):
     # After cloning the repo and installing requirements do python3 telesetup.py an fill th this
     EAGLE_STRING = "1BVtsOKYBu0QNNt8J_i82v2GiDBVPUCS3owzDzIjmJ92GKuH2TBXsRFH77E2C8uRDrOgAKLweybxYWTm8yaibdahG1fhVxmc-iDR5q-Yatz8Us1tU-EimyjrL3Jx_0ad6GHa8j5iXpuvWtfr5JhvVv_l-NRbqlmgaRCAK8ifB9UmhjRxSZLD9Dxhc5zsNx-4Bhkb2lui_HAhPbZxIyqfjYdEOFAa_RDzp9jUvSa4XQkZmjfxOBZZMDKlHvI_rrMaMBt59Z096o1OoqSkPOiqxwEs9IUSUwZTOz4Eb53gfDFu4Ug9gp4d2BWibxSXy3w6sbT_w4mqnP7iaSgkVwffeC7Bnc2yV8Xg="
     # create a new bot in @botfather and fill the following vales with bottoken
-    BOT_TOKEN = "7217412726:AAEsahhAS5Li1w1DIVccJAVeqo69jANZMoM"
+    BOT_TOKEN = "7359812372:AAEMrQGAySNHtfnYMHE52Q8PVQpt7JprvTc"
     # command handler
     HANDLER = "."
     # command hanler for sudo
@@ -24,3 +24,4 @@ class Development(Config):
     # Your City's TimeZone
     TZ = "Asia/Kolkata"
     RANDOM_STUFF_API_KEY = "20240908-1401-4740-801f-0d56de118901"
+    PRIVATE_GROUP_BOT_API_ID = -1002342412856
