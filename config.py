@@ -19,14 +19,8 @@ class Development(Config):
     HANDLER = "."
     # command hanler for sudo
     SUDO_HANDLER = "."
-    # External plugins repo
-    EXTERNAL_REPO = True
-    EXTERNAL_REPOBRANCH = "Bad"
     UPSTREAM_REPO = "Bad"
     VCMODE = False
     # Your City's TimeZone
     TZ = "Asia/Kolkata"
     RANDOM_STUFF_API_KEY = "20240908-1401-4740-801f-0d56de118901"
-    PRIVATE_GROUP_BOT_API_ID = -100
-    EXTERNAL_REPO = "https://github.com/badmunda98/EaglePlugins"
-    # if you need badcat plugins set "True"
