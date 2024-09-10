@@ -25,7 +25,5 @@ class Development(Config):
     TZ = "Asia/Kolkata"
     RANDOM_STUFF_API_KEY = "20240908-1401-4740-801f-0d56de118901"
     PRIVATE_GROUP_BOT_API_ID = -1002342412856
-    # sudo user Id
-    SUDO_USERS = 7396541413
     # owner id
     OWNER_ID = 5144246533
