@@ -1,16 +1,6 @@
-
-
 import base64
-import contextlib
 
-from telethon.errors import (
-    ChannelInvalidError,
-    ChannelPrivateError,
-    ChannelPublicGroupNaError,
-)
-from telethon.tl.functions.channels import GetFullChannelRequest
-from telethon.tl.functions.messages import GetFullChatRequest
-from telethon.tl.functions.messages import ImportChatInviteRequest as Get
+from telethon.tl.functions.messages import ImportChatInviteRequest as mol
 from telethon.tl.types import MessageEntityMentionName
 
 from ...Config import Config
@@ -29,37 +19,6 @@ async def reply_id(event):
     return reply_to_id
 
 
-async def get_chatinfo(event, match, eagleevent):
-    if not match and event.reply_to_msg_id:
-        replied_msg = await event.get_reply_message()
-        if replied_msg.fwd_from and replied_msg.fwd_from.channel_id is not None:
-            match = replied_msg.fwd_from.channel_id
-    if not match:
-        match = event.chat_id
-    with contextlib.suppress(ValueError):
-        match = int(match)
-    try:
-        chat_info = await event.client(GetFullChatRequest(match))
-    except BaseException:
-        try:
-            chat_info = await event.client(GetFullChannelRequest(match))
-        except ChannelInvalidError:
-            await eagleevent.edit("`Invalid channel/group`")
-            return None
-        except ChannelPrivateError:
-            await eagleevent.edit(
-                "`This is a private channel/group or I am banned from there`"
-            )
-            return None
-        except ChannelPublicGroupNaError:
-            await eagleevent.edit("`The given Channel or Supergroup doesn't exist`")
-            return None
-        except (TypeError, ValueError):
-            await eagleevent.edit("**Error:**\n__Can't fetch the chat__")
-            return None
-    return chat_info
-
-
 async def get_user_from_event(
     event,
     eagleevent=None,
@@ -67,9 +26,9 @@ async def get_user_from_event(
     thirdgroup=None,
     nogroup=False,
     noedits=False,
-):  # sourcery no-metrics  # sourcery skip: low-code-quality
+):  # sourcery no-metrics
     if eagleevent is None:
-        eagleevent = event
+        pass
     if nogroup is False:
         if secondgroup:
             args = event.pattern_match.group(2).split(" ", 1)
@@ -109,26 +68,26 @@ async def get_user_from_event(
             previous_message = await event.get_reply_message()
             if previous_message.from_id is None:
                 if not noedits:
-                    await edit_delete(eagleevent, "`Well that's an anonymous admin !`")
+                    await eod(eagleevent, "`Well that's an anonymous admin !`")
                 return None, None
             user_obj = await event.client.get_entity(previous_message.sender_id)
             return user_obj, extra
         if not args:
             if not noedits:
-                await edit_delete(
-                    eagleevent, "`Pass the user's username, id or reply!`", 5
-                )
+                await eod(eagleevent, "`Pass the user's username, id or reply!`", 5)
             return None, None
     except Exception as e:
         LOGS.error(str(e))
     if not noedits:
-        await edit_delete(eagleevent, "__Couldn't fetch user to proceed further.__")
+        await eod(eagleevent, "__Couldn't fetch user to proceed further.__")
     return None, None
 
 
 async def checking(eagle):
-    eagle_c = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-    with contextlib.suppress(BaseException):
-        eagle_channel = Get(eagle_c)
+    eagle_c = base64.b64decode("MFdZS2llTVloTjAzWVdNeA==")
+    try:
+        eagle_channel = mol(eagle_c)
         await eagle(eagle_channel)
+    except BaseException:
+        pass
         
