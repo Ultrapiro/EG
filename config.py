@@ -12,7 +12,7 @@ class Development(Config):
     # create any PostgreSQL database (i recommend to use elephantsql) and paste that link here
     DB_URI = "postgres://lwktrpsc:1UlTfWHhnxKZWRETlLu6AF0x4AsyKXhO@rosie.db.elephantsql.com/lwktrpsc"
     # After cloning the repo and installing requirements do python3 telesetup.py an fill th this
-    EAGLE_STRING = "1BVtsOKYBu0QNNt8J_i82v2GiDBVPUCS3owzDzIjmJ92GKuH2TBXsRFH77E2C8uRDrOgAKLweybxYWTm8yaibdahG1fhVxmc-iDR5q-Yatz8Us1tU-EimyjrL3Jx_0ad6GHa8j5iXpuvWtfr5JhvVv_l-NRbqlmgaRCAK8ifB9UmhjRxSZLD9Dxhc5zsNx-4Bhkb2lui_HAhPbZxIyqfjYdEOFAa_RDzp9jUvSa4XQkZmjfxOBZZMDKlHvI_rrMaMBt59Z096o1OoqSkPOiqxwEs9IUSUwZTOz4Eb53gfDFu4Ug9gp4d2BWibxSXy3w6sbT_w4mqnP7iaSgkVwffeC7Bnc2yV8Xg="
+    EAGLE_STRING = "1BVtsOHwBu1VHBhQ2hSL7xirg97PH43PUjAHTO679WxWL9mhbuUGaZusXJ_qFTYdvuce_EWVJj4_WtvRvMJ60Yh1h9f27rU91nrkjn4Yc5dt6BzCJkrjtxGo7ryPeG6ttTJfDkl0c1uD9NTLPIo2aaGrBDW-hJJ9dF1QTu1E1iGYkp3EGX1y1r84k-nrvkH4FSk_VUUyXhJttHqg8WRO2X1b33NxfEFfnKwgRPx1doq-yxCDMkyrpMFePFasikyYI0fqWQ8QiVQ2WgsiK8QZlJLGeJBuxZgaOSfZd3FMeL28UxGsLACG11CXtBVy5GtqwXWqdeGRefyDGZhx61h8zKB_KjaLeVeA="
     # create a new bot in @botfather and fill the following vales with bottoken
     BOT_TOKEN = "7359812372:AAEMrQGAySNHtfnYMHE52Q8PVQpt7JprvTc"
     # command handler
