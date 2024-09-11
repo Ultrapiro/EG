@@ -13,7 +13,6 @@ from .. import *
 from ..Config import Config
 from ..core.logger import logging
 from ..core.managers import eod, eor
-from ..core.managers import edit_or_reply
 from ..core.session import eagle
 from ..helpers import *
 from ..helpers.utils import _format, _eagletools, _eagleutils, install_pip, reply_id
